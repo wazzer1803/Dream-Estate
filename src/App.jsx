@@ -1,15 +1,15 @@
 import React from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import SignUp from './pages/SignUp'
+import SignUp from './pages/SignUp.jsx'
 import SignIn from './pages/SignIn'
 import Profile from './pages/profile'
 import About from './pages/About'
 import Home from './pages/Home'
 import Header from './components/Header'
-const App = () => {
+export default function App(){
   return (
    <BrowserRouter>
-   <Header>
+    <Header/>
    <Routes>
      <Route path="/" element={<Home/>}/>
      <Route path="/sign-in" element={<SignIn/>}/>
@@ -18,11 +18,11 @@ const App = () => {
      <Route path="/about" element={<About/>}/>
      
    </Routes>
-   </Header>
+   
    
    
    </BrowserRouter>
   )
 }
 
-export default App
+
