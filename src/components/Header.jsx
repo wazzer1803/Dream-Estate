@@ -9,11 +9,11 @@ export default function Header()  {
   const { currentUser } = useSelector((state) => state.user);
   
   return (
-    <header className='bg-slate-300 shadow-xl'>
-   <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
+    <header className='bg-orange-200 shadow-xl'>
+   <div className='flex justify-between items-center max-w-6xl mx-auto pt-3 pb-3'>
    <Link to='/'>
    <h1 className='font-bold text-sm sm:text-3xl flex flex-wrap'>
-        <span   className='text-blue-400'>Dream</span>
+        <span   className='text-blue-700'>Dream</span>
         <span className='text-slate-700'>Estate</span>
     </h1>
    </Link>
