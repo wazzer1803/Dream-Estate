@@ -179,18 +179,26 @@ export default function Profile() {
         >
           {loading ? 'Loading...' : 'Update'}
         </button>
+        <Link   to="/create-listing" className='bg-green-600 text-white p-3 rounded-lg hover:opacity-95 disabled opacity:80 text-center'>
+       Ayo
+        </Link>
       </form>
-      <div className='flex justify-between mt-5'>
+      <div className='flex flex-col lg:flex-row justify-between max-w-1000px mt-5  flex-1'>
+       <button disabled={loading} className='bg-red-500 text-bold text-white rounded-lg p-3 hover:opacity-95 disabled opacity:80 pl-11 pr-11' onClick={handleDeleteUser}>
+
         <span
           
-          className='text-red-700 cursor-pointer'
-          onClick={handleDeleteUser}
-        >
+          className=' cursor-pointer'
+          
+          >
           Delete account
         </span>
-        <span className='text-red-700 cursor-pointer' onClick={handleSignOut}>
+      </button>
+      <button disabled={loading} onClick={handleSignOut} className='bg-red-500 text-bold text-white rounded-lg p-3 hover:opacity-95 disabled opacity:80 ' >
+        <span className=' cursor-pointer pl-14 pr-14' >
           Sign out
         </span>
+      </button>
       </div>
       <p className='text-red-700 mt-5'>{error ? error : ''}</p>
       <p className='text-green-700 mt-5'>
